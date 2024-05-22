@@ -6,18 +6,12 @@ models:
       Staging table for addresses. Contains customer addresses including columns for zipcodes states and countries
     columns:
       - name: address_id
-        description: Primary key of the addresses table
-        tests:
-          - unique
-          - not_null    
+        description: Primary key of the addresses table   
   - name: stg_events
     description: Staging table for digital product events. Event types include page views, add to carts, checkouts, packages shipped
     columns:
       - name: event_id
         description: Primary key of the events table
-        tests:
-          - unique
-          - not_null      
   - name: stg_order_itemss
     description: Staging table for order_items. Contains info on products and quantity of products purchased in each order    
   - name: stg_orders
@@ -41,9 +35,6 @@ models:
     columns:
       - name: promo_id
         description: Primary key of the promos table
-        tests:
-          - unique
-          - not_null          
   - name: stg_users
     description: Staging table for users. Contains one row per user id 
     columns:
