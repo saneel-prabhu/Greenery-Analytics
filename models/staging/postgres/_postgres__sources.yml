@@ -13,38 +13,15 @@ sources:
 
     tables: # this is where we define table metadata (name, description, load timestamps)
       - name: addresses 
-        description: >
-          Contains addresses including columns for zipcodes states and countries
-        columns:
-          - name: address_id
-            description: Primary key of the addresses table
-            tests:
-              - unique
-              - not_null
+        description: Raw source addresses from postgres
       - name: events
-        description: >
-          Contains raw events for greenery website
-        columns:
-          - name: event_id
-            description: Primary key of the events table
-            tests:
-              - unique
-              - not_null      
-      - name: orders
-        description: >
-          Contains orders for greenery website including user address cost and delivery info 
-        columns:
-          - name: order_id
-            description: Primary key of the addresses table
-            tests:
-              - unique
-              - not_null      
+        description: Raw source events from postgres
+      - name: orders   
+        description: Raw source orders from postgres      
       - name: order_items
-        description: >
-          Contains info on products and quantity of products purchased in each order 
+        description: Raw source order items from postgres
       - name: products
-        description: >
-          Contains products sold by greenery 
+        description: Contains products sold by greenery 
         columns:
           - name: product_id
             description: Primary key of the products table
@@ -52,14 +29,6 @@ sources:
               - unique
               - not_null      
       - name: promos
-        description: >
-          Contains promotions or promo codes used on the greenery website
-        columns:
-          - name: promo_id
-            description: Primary key of the promos table
-            tests:
-              - unique
-              - not_null      
       - name: users
         description: >
           Contains one row per user 
