@@ -21,20 +21,8 @@ sources:
       - name: order_items
         description: Raw source order items from postgres
       - name: products
-        description: Contains products sold by greenery 
-        columns:
-          - name: product_id
-            description: Primary key of the products table
-            tests:
-              - unique
-              - not_null      
+        description: Raw source products from postgres
       - name: promos
+        description: Raw source promos from postgres      
       - name: users
-        description: >
-          Contains one row per user 
-        columns:
-          - name: user_id
-            description: Primary key of the users table
-            tests:
-              - unique
-              - not_null
+        description: Raw source users from postgres      
