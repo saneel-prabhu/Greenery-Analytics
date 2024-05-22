@@ -7,5 +7,6 @@ current_segments AS (
     FROM rfm_segments
     WHERE date_hour = (SELECT MAX(date_hour) FROM rfm_segments)
 )
-SELECT *
-FROM current_segments
+select * exclude(date_hour)
+from current_segments
+order by 2
