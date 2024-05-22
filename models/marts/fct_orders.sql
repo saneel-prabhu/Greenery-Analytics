@@ -30,6 +30,7 @@ select
     o.order_cost,
     p.discount as promo_discount,
     o.shipping_cost,
+    (o.order_cost - p.discount - o.shipping_cost) as sales_total,
     o.order_total,
     o.tracking_id,
     o.shipping_service,

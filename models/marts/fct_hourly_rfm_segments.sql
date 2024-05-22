@@ -3,7 +3,7 @@ select
     user_id, 
     created_at as ordered_at,
     order_id,
-    order_total,
+    sales_total,
     total_products_ordered
 from {{ ref('fct_orders') }}
 ), 
@@ -22,7 +22,7 @@ orders_with_hours as (
         date_hour,
         ordered_at,
         order_id,
-        order_total,
+        sales_total,
         total_products_ordered
     from hours 
         join orders on orders.ordered_at <= hours.date_hour
@@ -35,7 +35,7 @@ rfm_values AS (
         MAX(ordered_at) AS max_payment_date,
         timestampdiff(minute, MAX(ordered_at), date_hour) as recency,
         COUNT(DISTINCT order_id) AS frequency,
-        SUM(order_total) AS monetary
+        SUM(sales_total) AS monetary
     FROM orders_with_hours
     GROUP BY user_id, date_hour
 ), 

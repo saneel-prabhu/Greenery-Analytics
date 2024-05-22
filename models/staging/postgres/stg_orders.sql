@@ -4,7 +4,7 @@ select
     promo_id,
     address_id,
     created_at,
-    order_cost, 
+    order_cost,
     shipping_cost,
     order_total,
     tracking_id,
