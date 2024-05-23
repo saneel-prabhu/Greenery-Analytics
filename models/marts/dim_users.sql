@@ -24,7 +24,7 @@ select
     a.state, 
     a.zipcode,
     uo.total_orders,
-    uo.total_spend,
+    uo.total_sales,
     uo.average_order_size,
     uo.first_order_at,
     uo.last_order_at,
