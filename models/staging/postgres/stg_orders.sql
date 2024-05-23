@@ -9,9 +9,9 @@ select
     address_id,
     created_at,
     order_cost,
-    promos.discount as promo_discount,
+    ifnull(promos.discount, 0) as promo_discount,
     shipping_cost,
-    (order_cost - promos.discount - shipping_cost) as sales_total,
+    (order_cost - ifnull(promos.discount, 0) - shipping_cost) as sales_total,
     order_total,
     tracking_id,
     shipping_service,
@@ -19,4 +19,4 @@ select
     delivered_at,
     status
 from {{source('postgres', 'orders')}} as orders 
-join promos using (promo_id)
+left join promos using (promo_id)
