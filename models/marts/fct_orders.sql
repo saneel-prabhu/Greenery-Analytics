@@ -6,9 +6,9 @@ addresses as (
 select * from {{ ref('stg_addresses') }}
 ), 
 
-promos as (
-select * from {{ ref('stg_promos') }}
-),
+-- promos as (
+-- select * from {{ ref('stg_promos') }}
+-- ),
 
 total_order_items as (
 select 
@@ -28,9 +28,9 @@ select
     o.created_at,
     o.promo_id,
     o.order_cost,
-    p.discount as promo_discount,
+    -- p.discount as promo_discount,
     o.shipping_cost,
-    (o.order_cost - p.discount - o.shipping_cost) as sales_total,
+    o.sales_total,
     o.order_total,
     o.tracking_id,
     o.shipping_service,
@@ -41,7 +41,7 @@ select
 from orders as o 
 left join addresses as a 
     on a.address_id = o.address_id
-left join promos as p 
-    on p.promo_id = o.promo_id 
+-- left join promos as p 
+--     on p.promo_id = o.promo_id 
 left join total_order_items as toi 
     on toi.order_id = o.order_id 
