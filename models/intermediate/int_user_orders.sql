@@ -2,8 +2,8 @@ with user_orders as (
     select 
         user_id, 
         count(distinct order_id) as total_orders,
-        sum(order_total) as total_spend,
-        round(total_spend / total_orders, 2) as average_order_size, 
+        sum(sales_total) as total_sales,
+        round(total_sales / total_orders, 2) as average_order_size, 
         min(created_at) as first_order_at,
         max(created_at) as last_order_at
     from {{ ref('stg_orders') }}
@@ -36,7 +36,7 @@ most_ordered_product as (
 select 
     uo.user_id, 
     uo.total_orders,
-    uo.total_spend,
+    uo.total_sales,
     uo.average_order_size, 
     uo.first_order_at,
     uo.last_order_at,
