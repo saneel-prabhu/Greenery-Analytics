@@ -18,9 +18,9 @@ We will use the dbt project to build two main data products for our stakeholders
 
  Analytics engineers can add value to the company outside of building models that lead to reports or dashboards.
 
-Take for example a Customer Experience (CX) team that uses [Front](https://front.com/) as a customer service platform. As customers create tickets to ask for assistance, the CS team will start triaging them in the order that they are created. This is a decent first approach, but not a data-driven one.
+Take for example a Customer Experience (CX) team that uses [Front](https://front.com/) as a customer service platform. As customers create tickets to ask for assistance, the CX team will start triaging them in the order that they are created. This is a decent first approach, but not a data-driven one.
 
-An improvement to this would be to prioritize the tickets based on the customer segment, answering our most valuable customers first. An Analytics Engineer can build a segmentation model to identify the power users (for example, with an RFM approach) and store it in the data warehouse. The Analytics Engineering team can then export that user attribute to the support tool, allowing the CX team to build rules on top of it.
+An improvement to this would be to prioritize the tickets based on the customer segment, answering our most valuable and/or most likely to churn customers first. An Analytics Engineer can build a segmentation model to identify the power users (for example, with an RFM approach) and store it in the data warehouse. The Analytics Engineering team can then export that user attribute to the support tool, allowing the CX team to build rules on top of it.
 
 ### RFM Segmentation
 
