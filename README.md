@@ -35,7 +35,7 @@ We are going to use just the Recency and Frequency matrix, and use the Monetary 
 
 ## Part 2: Ecommerce KPI Dashboard
 
-Most data teams bring value to their businesses by help them generate insights through traditional business intelligence.
+Most data teams bring value to their organizations by helping them generate insights through traditional BI/Analytics.
   
-**[Click here to view the Greenery KPI Dashboard in Hex built using the data models in this dbt project.](https://app.hex.tech/c437601f-be32-4d9d-9980-40b0221d3d57/app/8722a823-f110-4f92-9757-883090983fb9/latest)**
+**[Click here to view a Greenery KPI Dashboard in Hex built using the data models in this dbt project.](https://app.hex.tech/c437601f-be32-4d9d-9980-40b0221d3d57/app/8722a823-f110-4f92-9757-883090983fb9/latest)**
 
