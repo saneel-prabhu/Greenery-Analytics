@@ -1,6 +1,6 @@
 # H1 Greenery Analytics
 
-This is a sandbox project using fictional ecommerce customer data to demonstrate how to use dbt to build real world data products.
+This is a sandbox project using fictional ecommerce customer data to demonstrate how to use dbt to build real life ELT pipelines and data products.
 
 Use this project to learn dbt development best practices such as model layering, data modeling, testing, documentation, macros, and exposures + dbt with traditional analytics.
 
