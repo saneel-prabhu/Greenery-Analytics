@@ -13,6 +13,9 @@ We will use the dbt project to build two main data products for our stakeholders
 1.  A historical customer segmentation model to help the customer experience team prioritize their support tickets.
     
 2.  A business intelligence dashboard to help the Greenery management team track their key performance indicators (KPIs).
+
+## Greenery Data Set Overview
+![](https://corise.com/static/course/analytics-engineering-with-dbt/assets/cl0ju2ufv009o14d40j5i4erv/drawSQL-export-2022-03-09_09_26.png)
  
 ## Part 1: Customer Segmentation Model
 
